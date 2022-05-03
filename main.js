@@ -55,12 +55,19 @@ const addOnlyNums = (...sumaTodo) => {
     })    
     console.log(contador)
 }
-
 addOnlyNums(1, 'perro', 2, 4); //7
 
 // Escribe una función llamada countTheArgs que pueda recibir cualquier número de argumentos y devuelva un número que indique cuántos argumentos ha recibido.
 
-
+const countTheArgs = (...argumentosRecibidos) => {
+    contador = 0;
+    argumentosRecibidos.forEach (argumento => {
+        contador += 1
+    })
+    console.log (`He recibido ${contador} argumento/s`)
+}
 
 countTheArgs('gato', 'perro'); //2
 countTheArgs('gato', 'perro', 'pollo', 'oso'); //4
+
+// Escribe una función llamada combineTwoArrays que reciba dos array cómo argumentos y devuelva solo un array que combine los dos (usando spread operator).
